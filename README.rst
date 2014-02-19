@@ -1,6 +1,10 @@
 Data Proxy
 ++++++++++
 
+for apache's mod_wsgi add this to the virtual host ::
+
+    WSGIScriptAlias /dataproxy <<SOURCEDIR>>/dataproxy/dataproxy/apache-dataproxy.wsgi
+
 Data Proxy is a web service for converting data resources into structured form such as json.
 
 .. image:: http://packages.python.org/dataproxy/_images/data_proxy.png
