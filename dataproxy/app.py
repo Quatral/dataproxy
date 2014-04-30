@@ -224,7 +224,7 @@ def transform(type_name, flow, url, query, max_results):
         stream = urllib2.urlopen(url)
         records, metadata = dataconverters.commas.parse(stream, encoding=encoding,
                 window=window, guess_types=guess_types)
-        if len(metadata['fields']) == 1 and metadata['fields'][0]['id'].find('|') != -1:
+        if len(metadata['fields']) >= 1 and metadata['fields'][0]['id'].find('|') != -1:
             stream = urllib2.urlopen(url)
             records, metadata = dataconverters.commas.parse(stream, delimiter='|', encoding=encoding,
                     window=window, guess_types=guess_types)
